@@ -32,7 +32,7 @@ Note: *atypical* day of week and rooms for last week of workshop
   ***Room 915*, Building 54**\
   **Instructor**: Gael Forget
 
-- ### Friday, January 30th, 10 AM - 12 PM
+- ### Friday, January 31st, 10 AM - 12 PM
   **Lecture 7: Big data: challenges and solutions**\
   ***Room 915*, Building 54**\
   **Instructor**: Henri Drake
