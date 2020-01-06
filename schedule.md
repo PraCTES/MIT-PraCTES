@@ -19,14 +19,19 @@
 **Room 1623, Building 54**
 **Instructor**: Tristan Abbott
 
-
 ### Friday, January 24th, 10 AM - 12 PM
 **Lecture 5: Numerical simulation and modelling complex systems**\
 **Room 1623, Building 54**
 **Instructor**: Mara Freilich
 
-## Note: atypical day of week and rooms for last week of workshop
+## Note: *atypical* day of week and rooms for last week of workshop
 
-<span style="color:red">Thursday</span>, January 30th
+### *Thursday*, January 30th, 10 AM - 12 PM
+**Lecture 6: Numerical simulation and modelling complex systems**\
+***Room 915*, Building 54**
+**Instructor**: Gael Forget
 
-
+### Friday, January 30th, 10 AM - 12 PM
+**Lecture 7: Big data: challenges and solutions**\
+***Room 915*, Building 54**
+**Instructor**: Henri Drake
