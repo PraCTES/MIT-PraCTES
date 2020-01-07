@@ -1,3 +1,3 @@
-## MIT Practial Computing Tutorials for Earth Scientists
+## MIT Practial Computing Tutorials for Earth Scientists (PraCTES)
 
-More information coming soon.
+<img src="PraCTES_flyer.jpg" width="100%">
