@@ -1,0 +1,4 @@
+[deps]
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+NetCDF = "30363a11-5582-574a-97bb-aa9a979735b9"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
