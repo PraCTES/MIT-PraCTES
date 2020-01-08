@@ -2,7 +2,7 @@ name: python-objects
 channels:
   - conda-forge
 dependencies:
-  - jupyterlab
+  - jupyterlab >= 1.0
   - python
   - numpy
   - netcdf4
@@ -10,3 +10,5 @@ dependencies:
   - matplotlib
   - cartopy
   - dask
+  - xarray
+  - nodejs
