@@ -4,7 +4,7 @@
   **Lecture 1: Introduction to programming**\
   **Room 1623, Building 54**\
   **Instructor**: Mukund Gupta\
-  **WebEx Link for virtual attendees:** [[click here]](https://mit.webex.com/mit/j.php?MTID=m2655f6224c143515bb94cd016f2fb347)
+  **WebEx link for virtual attendees:** [[click here]](https://mit.webex.com/mit/j.php?MTID=m2655f6224c143515bb94cd016f2fb347) (Meeting Password: 3CUBjX75)
 
 - ### Wednesday, January 15th, 10 AM - 12 PM
   **Lecture 2: Object-oriented programming and data analysis packages**\
