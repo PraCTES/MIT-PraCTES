@@ -2,6 +2,7 @@
 
 #### How to access the code tutorials
 Launch the code tutorial environment (for Python and Julia) right in your browser (no need to download anything!): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab)
+
 To run the Matlab scripts, you will need to install Matlab (version > 2019b).
 
 Information on how to run the Python and Julia notebooks on your personal machine (and how to set up your own Python / Julia environments for a scientific project) coming soon.
