@@ -1,9 +1,12 @@
 ## MIT Practial Computing Tutorials for Earth Scientists (PraCTES)
 
+#### How to access the code tutorials
 Launch the code tutorial environment (for Python and Julia) right in your browser (no need to download anything!): [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab)
 To run the Matlab scripts, you will need to install Matlab (version > 2019b).
 
 Information on how to run the Python and Julia notebooks on your personal machine (and how to set up your own Python / Julia environments for a scientific project) coming soon.
+
+<hr>
 
 The PraCTES workshop is a series of demos and hands-on tutorials for practical computing *by earth scientists* and *for earth scientists*. The goal of the workshop is to introduce practical computational tools and concepts so that earth scientists can spend more doing science and less time debugging data analysis code, processing large data sets, deciphering model source code, and other frustrating and time-consuming tasks of modern earth science research. We aim to make the workshop accessible and useful to scientists with all levels of programming proficiency and will cover topics ranging from introductory concepts in programming to state-of-the-art software tools for wrangling big data on the Cloud.
 
