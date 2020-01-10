@@ -1,7 +1,7 @@
 ## MIT Practial Computing Tutorials for Earth Scientists (PraCTES)
 
 #### How to access the code tutorials
-Click to [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab) the code tutorial environment (for Python and Julia) in your browser (no downloads necessary)! 
+Click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab) to launch the code tutorial environment (for Python and Julia) in your browser (no downloads required)!
 
 To run the Matlab scripts, you will need to install Matlab (version > 2019b).
 
