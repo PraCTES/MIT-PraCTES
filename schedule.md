@@ -33,12 +33,13 @@
 Note: *atypical* day of week and rooms for last week of workshop
 
 - ### *Thursday*, January 30th, 10 AM - 12 PM
-  **Lecture 6: Numerical models used at MIT EAPS**\
-  ***Room 915*, Building 54**\
-  **Instructors**: Gael Forget, Tristan Abbott, Fiona Clerc
+  **Lecture 6: Numerical models used at MIT EAPS**
     - The [MIT general circulation model (MITgcm)](https://mitgcm.readthedocs.io/en/latest/) and related [Estimating the Circulation and Climate of the Ocean (ECCO)](https://ecco.jpl.nasa.gov/) (Gael Forget)
     - The [System for Atmospheric Modelling (SAM)](http://rossby.msrc.sunysb.edu/~marat/SAM.html) (Tristan Abbott)
     - The [Advanced Solver for Problems in Earth's ConvecTion](https://aspect.geodynamics.org/) (Fiona Clerc)
+    
+  ***Room 915*, Building 54**\
+  **Instructors**: Gael Forget, Tristan Abbott, Fiona Clerc\
   WebEx link for virtual attendees: [[click here]](https://mit.webex.com/mit/j.php?MTID=m01ab61a2b92f4ae5a94429f812bb1936) (Meeting Password: zKPpj385)
 
 - ### Friday, January 31st, 10 AM - 12 PM
