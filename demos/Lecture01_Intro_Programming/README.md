@@ -35,8 +35,43 @@ dependencies:
 
 5. Open a [jupyter-lab](https://jupyterlab.readthedocs.io/en/stable/) instance with the command `jupyter-lab`.
 
-6. User the filesystem browser in the top left to navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the Python tutorial `Lecture01_intro_programming.ipynb`.
+6. Use the filesystem browser in the top left to navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the Python tutorial notebook `Lecture01_intro_programming.ipynb`.
 
 ### Julia
 
+1. [Download](https://julialang.org/downloads/) and install Julia (> v.1.0.0)
+
+2. Launch julia
+
+3. Use the julia ["shell mode"](https://docs.julialang.org/en/v1/stdlib/REPL/#man-shell-mode-1) to navigate to the `MIT-PraCTES` root directory
+
+4. Activate the julia ["Pkg REPL"](https://docs.julialang.org/en/v1/stdlib/Pkg/index.html) (a package manager mode) by typing the `]` key.
+
+5. Within the julia Pkg REPL, type `activate binder` to activate the julia environment described by the `Project.toml` and `Manifest.toml` files. The `Project.toml` contains the high-level instructions for the packages (depdendencies or deps for short) to be installed:
+```toml
+[deps]
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+NetCDF = "30363a11-5582-574a-97bb-aa9a979735b9"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+```
+while the `Manifest.toml` file contains a comprehensive list of every single julia package the above packages depend upon.
+
+6. Press the `[Backspace]` or `[Delete]` buttons to return to the julia REPL
+
+7. In the julia REPL type:
+
+```julia
+using IJulia
+jupyterlab()
+```
+To activate [jupyterlab](https://jupyterlab.readthedocs.io/en/stable/) and launch a jupyterlab instance.
+
+8. Use the filesystem browser in the top left to navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the julia tutorial notebook `Lecture01_intro_programming_jl.ipynb`.
+
 ### Matlab
+
+1. [Download](https://www.mathworks.com/downloads/) and install Matlab (you may be able to get a free license through your academic institution or company - if not, a personal license can be very pricey and we recommend the free and open-source alternatives above).
+
+2. Launch Matlab
+
+3. Navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the Matlab script `Lecture01_intro_programming.m`.
