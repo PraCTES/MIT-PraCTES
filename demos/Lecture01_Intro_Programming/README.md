@@ -11,7 +11,7 @@ The Python and Julia notebooks can be run in two ways: via a ["binder"](https://
 
 1. Follow the [instructions to install Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), a Python package manager which handles the complex inter-dependences between various Python packages behind the scenes.
 
-2. Follow the [instructions to start Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda) (conda for short).
+2. Follow the [instructions to launch Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda) (conda for short).
 
 3. Navigate to the `/MIT-PraCTES/` root directory and type the command `conda env update -f binder/environment.yml` to create (and, if it already exists, create) a conda environment based on the `environment.yml` file, the contents of which describe the Python packages we want to install in the environment and should look something like:
 ```yml
