@@ -8,3 +8,16 @@ wget https://scrippsco2.ucsd.edu/assets/data/atmospheric/stations/in_situ_co2/mo
 
 # Magnitude 4.5 or larger earthquakes in the last 30 days
 wget https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.csv -O data/big_earthquakes.csv
+
+# HADCRUT global temperature data (unzip)
+# https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/download.html
+wget https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/gridded_fields/HadCRUT.4.6.0.0.median_netcdf.zip
+unzip HadCRUT.4.6.0.0.median_netcdf.zip
+mv HadCRUT.4.6.0.0.median.nc data/
+rm HadCRUT.4.6.0.0.median_netcdf.zip
+
+# GPCP gridded precipitation data
+# https://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html
+wget ftp://ftp.cdc.noaa.gov/Datasets/gpcp/precip.mon.mean.nc -O data/GPCP_precip.nc
+
+
