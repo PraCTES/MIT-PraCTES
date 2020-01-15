@@ -10,20 +10,26 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 
 - github, git & cloud services (guides, accounts / organizations, apps / cloud)
 	- Getting started with `Github` & `git`: [Hello World](https://guides.github.com/activities/hello-world/)
+	- command line git (& julia, ls, cat, etc)
 	- Organization examples: [JuliaDynamics](https://github.com/juliadynamics), [MITgcm](https://github.com/mitgcm)
 	- Apps examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
 - documentation (md, jupyter, docstrings, ... rst, tex, ... PRs, issues)
 	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/), [MacDown](https://macdown.uranusjr.com/) app for macOS.
 	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia.
 	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [https://readthedocs.org]() as an alternative.
-- archiving (doi, zenodo, dataverse ... vs ftp, html, cloud hosting)
-	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
-	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
 - version control (git, blame, commit, releases, ... pkg registry/manager)
 	- [git-handbook](https://guides.github.com/introduction/git-handbook/)
 	- ...
 - unit testing (ref result, formulate test, computer, ... automation, travis)
 	- [Travis CI](https://docs.travis-ci.com)
+	- ...
+- archiving (doi, zenodo, dataverse ... vs ftp, html, cloud hosting)
+	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
+	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
+- registering and distributing a package
+	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), `PkgTemplates.jl` and `registries` in Julia
+	- environmments / dependencies / `.julia/`
+	- [mybinder.org]() by itself
 	- ...
 
 ## Future
@@ -37,9 +43,15 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 
 ## DYI
 
-- Julia & diagnostic examples (`PkgTemplates.jl`, docs, tests, apps, ... `MeshArrays.jl`, `IndividualDisplacements.jl`, Forget & Ferreira 2019)
-- MITgcm & ECCO examples (org, repo, doc, blame, issues, PRs, tests, upstream, ... ECCO, archives, doc, rerun, test)
-- Check out these other tools: aws, docker, slack, overleaf, ...
+- Julia & diagnostic examples
+	- docs, tests, apps, ... 
+	- `MeshArrays.jl`, `IndividualDisplacements.jl`, Forget & Ferreira 2019
+- [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) & [ECCO](https://eccov4.readthedocs.io/en/latest/?badge=latest) examples
+	- org, repo, doc, blame, issues, PRs, tests, upstream, ...
+	- ECCO, archives, doc, rerun, test, notebooks, ...
+- Check out these other tools: aws, docker, slack, overleaf, nextjournal, jupytext, [youtube](https://www.youtube.com/watch?v=RDxAy_zSUvg&feature=youtu.be), ...
 - [https://opensource.guide/how-to-contribute/]()
+- [https://www.youtube.com/user/JuliaLanguage]()
+
 
 
