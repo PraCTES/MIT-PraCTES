@@ -8,23 +8,32 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 
 ## Now
 
-- github, git & cloud services (guides, apps, organizations)
-	- [Hello World](https://guides.github.com/activities/hello-world/)
+- github, git & cloud services (guides, accounts / organizations, apps / cloud)
+	- Getting started with `Github` & `git`: [Hello World](https://guides.github.com/activities/hello-world/)
+	- Organization examples: [JuliaDynamics](https://github.com/juliadynamics), [MITgcm](https://github.com/mitgcm)
+	- Apps examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
 - documentation (md, jupyter, docstrings, ... rst, tex, ... PRs, issues)
-	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/), [MacDown](https://macdown.uranusjr.com/) app for macOS.
+	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia.
+	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [https://readthedocs.org]() as an alternative.
 - archiving (doi, zenodo, dataverse ... vs ftp, html, cloud hosting)
 	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
+	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
 - version control (git, blame, commit, releases, ... pkg registry/manager)
 	- [git-handbook](https://guides.github.com/introduction/git-handbook/)
+	- ...
 - unit testing (ref result, formulate test, computer, ... automation, travis)
 	- [Travis CI](https://docs.travis-ci.com)
+	- ...
 
 ## Future
 
 - maintainance & user support (issues, PRs, ... email, slack, etc)
 	- [Mastering Issues](https://guides.github.com/features/issues/)
+	- ...
 - dependencies, collabs, modularity, coding practices, ... reuse vs recode, etc
 	- [Mastering Forks](https://guides.github.com/activities/forking/)
+	- ...
 
 ## DYI
 
