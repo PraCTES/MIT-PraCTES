@@ -54,4 +54,42 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 - [https://www.youtube.com/user/JuliaLanguage]()
 
 
+## exercise #0
+
+Follow the directions in [Hello World](https://guides.github.com/activities/hello-world/) using your web-browser and your own laptop -- i.e., **not** the `binder` / `jupyterlab` cloud instance used for the rest of the exercises
+
+## exercise #1
+
+In the Jupyter lab side bar, or the launcher pane, click to launch a terminal window where you will be able to type:
+
+
+```
+cd ~
+git clone https://github.com/PraCTES/MIT-PraCTES
+cd MIT-PraCTES
+ls -la
+```
+
+In the Jupyter lab side bar (not the open terminal pane), double click on `demos/README.md` to open it the build in text editor. Add a blank line, save, and close the file. 
+
+Then go back to the open terminal pane, and type:
+
+```
+git status
+git diff
+```
+
+Next we will try `git commit` ...
+
+
+## exercise #2
+
+Download, compile, and run MITgcm on one of the unit tests:
+
+```
+cd ~
+git clone https://github.com/MITgcm/MITgcm
+cd MITgcm/verification/
+./testreport -t advect_cs
+```
 
