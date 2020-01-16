@@ -2,13 +2,18 @@
 
 # Organizing version-controlled, reproducible, and efficient scientific projects
 
-Here we will run through tools and methods that will allow you to set up your science & computations so that they will easy to reproduce and maintain in the future. A couple representative examples are then provided to illustrate these tools at work. Self-guided exercises are found at the end of this file. Exercises and examples in this session focus on and related services. 
+Here we will run through tools and methods that will allow you to set up your science & computations so that they will easy to reproduce and maintain in the future. A couple representative examples are then provided to illustrate these tools at work. Self-guided exercises are found at the end of this file. 
 
-**Ahead of our meeting, it is suggested** that you create your own [github.com](http://github.com/) account if you don't already have one. The [github guides](https://guides.github.com) provide very useful examples which we will discuss. **Exercise #0** in fact is `Hello World guide` (using git on your laptop) -- a great way to get ready for Friday's session. If you want to do more before the meeting, please consider: 
-- taking a look at some of the webpages and documentations listed below.
-- trying exercises 2 and 3 on the cloud (`binder`)
+**Ahead of this session, it is suggested** that you create a [github.com](http://github.com/) account if you do not have one yet. The [github guides](https://guides.github.com) provide very useful examples. **Exercise #0** in fact is just `Hello World guide` using git on your laptop -- a great way to get ready for this session. If you want to get further ahead, please consider: 
 
-_**Note: this is work in progress -- further modifications & cleanup are expected by tomorrow.**_
+- the webpages and documentations listed below.
+- exercises 2 and 3 using the repo `binder` link.
+
+_**Note: this file is work in progress -- further modifications & cleanup are expected by tomorrow.**_
+
+![](https://github.blog/wp-content/uploads/2019/01/Community-Updated-2X.png?resize=1024,611)         |  ![](https://image.slidesharecdn.com/ci-131213183852-phpapp01/95/github-travis-ci-coveralls-maven-ci2-19-638.jpg)
+:------------------------------:|:---------------------------------:
+![](https://camo.githubusercontent.com/6d7260eaa159cfb838b45bf168ff77adecf8b198/68747470733a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67)  |  ![](https://insights.tuhh.de/wp-content/uploads/2019/02/jupyter-workflow-973x1024.png)
 
 ## Set up your project 
 
