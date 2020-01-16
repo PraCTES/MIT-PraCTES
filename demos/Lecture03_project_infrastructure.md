@@ -2,11 +2,15 @@
 
 # Organizing version-controlled, reproducible, and efficient scientific projects
 
-Here we will run through tools and methods you can use **now** to make your science & computations reproducible in the **future**. The final section (**DIY**) focuses on two representative, real-life examples and tools that were not covered but are worth your consideration.
+Here we will run through tools and methods that will allow you to set up your science & computations so that they will easy to reproduce and maintain in the future. A couple representative examples are then provided to illustrate these tools at work. Self-guided exercises are found at the end of this file. Exercises and examples in this session focus on and related services. 
 
-Exercises and examples in this session focus on [github.com](http://github.com/) and related services. Ahead of our meeting, it is suggested that you create your own github account if you don't already have one. The [github guides](https://guides.github.com) provide very useful examples which we will rely on. Trying out the **Hello World** and **Mastering Markdown** guides would be a great way to get ready for Friday's session.
+**Ahead of our meeting, it is suggested** that you create your own [github.com](http://github.com/) account if you don't already have one. The [github guides](https://guides.github.com) provide very useful examples which we will discuss. **Exercise #0** in fact is `Hello World guide` (using git on your laptop) -- a great way to get ready for Friday's session. If you want to do more before the meeting, please consider: 
+- taking a look at some of the webpages and documentations listed below.
+- trying exercises 2 and 3 on the cloud (`binder`)
 
-## Now
+_**Note: this is work in progress -- further modifications & cleanup are expected by tomorrow.**_
+
+## Set up your project 
 
 - github, git & cloud services (guides, accounts / organizations, apps / cloud)
 	- Getting started with `Github` & `git`: [Hello World](https://guides.github.com/activities/hello-world/)
@@ -32,7 +36,7 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 	- [mybinder.org]() by itself
 	- ...
 
-## Future
+## Maintain and reproduce your results
 
 - maintainance & user support (issues, PRs, ... email, slack, etc)
 	- [Mastering Issues](https://guides.github.com/features/issues/)
@@ -41,7 +45,7 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 	- [Mastering Forks](https://guides.github.com/activities/forking/)
 	- ...
 
-## DYI
+## Real-Life Examples
 
 - Julia & diagnostic examples
 	- docs, tests, apps, ... 
@@ -49,10 +53,12 @@ Exercises and examples in this session focus on [github.com](http://github.com/)
 - [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) & [ECCO](https://eccov4.readthedocs.io/en/latest/?badge=latest) examples
 	- org, repo, doc, blame, issues, PRs, tests, upstream, ...
 	- ECCO, archives, doc, rerun, test, notebooks, ...
+
+## More tools and resources
+
 - Check out these other tools: aws, docker, slack, overleaf, nextjournal, jupytext, [youtube](https://www.youtube.com/watch?v=RDxAy_zSUvg&feature=youtu.be), ...
 - [https://opensource.guide/how-to-contribute/]()
 - [https://www.youtube.com/user/JuliaLanguage]()
-
 
 ## exercise #0
 
