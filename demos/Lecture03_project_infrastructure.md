@@ -7,7 +7,7 @@ Here we will run through tools and methods (_section 1._) that will make it much
 **Ahead of this session, it is suggested** that you create a [github.com](http://github.com/) account if you do not have one yet. The [github guides](https://guides.github.com) provide very useful examples. **Exercise #0** in fact is just `Hello World guide` using git on your laptop -- a great way to get ready for this session. If you want to get further ahead, please consider: 
 
 - the webpages and documentations listed below.
-- exercises 2 and 3 using the repo `binder` link.
+- exercises 2 and 3 using the repo [cloud instance](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab).
 
 _**Note: this file is work in progress -- further modifications & cleanup are expected by tomorrow.**_
 
@@ -17,53 +17,51 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 
 ## 1. Set up your project 
 
-- github, git & cloud services
-	- Get started with [GitHub](https://github.com/) & command-line `git` in **exercise 0**
-	- Get more familiar with command-line `git` & `julia` (**exercise 2**)
-	- Organization examples: [MITgcm](https://github.com/mitgcm), [JuliaDynamics](https://github.com/juliadynamics)
+- github ~ git + social networking + apps / cloud services
+	- Get started with [GitHub](https://github.com/) & command-line [git](https://education.github.com/git-cheat-sheet-education.pdf) in **exercise 0**
+	- Get more familiar with command-line tools (**exercise 2**)
+	- Organization examples: [MITgcm](https://github.com/mitgcm), [JuliaDynamics](https://github.com/juliadynamics), [JuliaClimate](https://github.com/JuliaClimate)
+	- Repo examples: [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl), [JuliaClimate repo](https://github.com/meta)
 	- Apps examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
+	- pull requests, issues, star, watch (see repo examples).
 - documentation 
 	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/), [MacDown](https://macdown.uranusjr.com/) app for macOS.
 	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia.
 	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as an alternative.
-	- GitHub PRs & issues
+	- pull requests, issues, star, watch 
 - version control
-	- [git-handbook](https://guides.github.com/introduction/git-handbook/)
-	- [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl)
-	- via the github GUI (e.g. history, blame, commits, releases)
-	- package registries & package managers (e.g. `Pkg.jl`)
+	- [git-handbook](https://guides.github.com/introduction/git-handbook/) tutorial from GitHub
+	- [the github GUI](https://github.com/PraCTES/MIT-PraCTES) (e.g. history, blame, commits, releases; see repo examples)
+	- [package registries](https://github.com/JuliaRegistries/General) & [package managers](https://julialang.github.io/Pkg.jl/v1/) (in python: conda, pip, etc).
 	- dependencies & compatibility constraints (e.g. `*.toml`)
+	- scripts (git) vs notebooks (jupytext) vs binary (dataverse)
 - unit testing 
 	- reference result, test formula, computer
-	- **exercise 2** gives two examples
+	- **exercise 2** provides examples
+	- in **exercise 4** you try it yourself
 	- automation: [Travis CI](https://docs.travis-ci.com)
-- archiving 
-	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
-	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
-	- doi, zenodo, dataverse vs ftp, html, cloud hosting
 - packages
-	- creating, registering, & distributing
+	- creating (**exercise 4**), registering, & distributing
 	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), `PkgTemplates.jl` and `registries` in Julia
 	- environmments / dependencies / `.julia/`
 	- Julia registrator and tag bots (~ github apps)
 
 ## 2. Maintain and reproduce your results
 
+- archiving 
+	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
+	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
+	- doi, zenodo, dataverse vs ftp, html, cloud hosting
 - maintainance & user support
 	- [Mastering Issues](https://guides.github.com/features/issues/)
-	- Pull requests, dependency updates, documentation
+	- Help with pull requests, Issues
+	- Regular, continued unit testing
+	- Keep up with dependency updates
+	- documentation ...
 - collaborators, modularity, coding practices, reuse vs recode, etc
 	- [Mastering Forks](https://guides.github.com/activities/forking/)
 	- **exercise 3**
-
-## 3. Real-Life Examples
-
-- Julia & diagnostic examples
-	- docs, tests, apps, ... 
-	- `MeshArrays.jl`, `IndividualDisplacements.jl`, Forget & Ferreira 2019
-- [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) & [ECCO](https://eccov4.readthedocs.io/en/latest/?badge=latest) examples
-	- org, repo, doc, blame, issues, PRs, tests, upstream, ...
-	- ECCO, archives, doc, rerun, test, notebooks, ...
+- Real-Life Examples [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) & [ECCO](https://eccov4.readthedocs.io/en/latest/?badge=latest) of stuff you should be able to re-run anytime
 
 ## 4. Additional resources & Exercises
 
@@ -71,12 +69,14 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 - [https://opensource.guide/how-to-contribute/]()
 - [https://www.youtube.com/user/JuliaLanguage]()
 - [mybinder.org]() by itself
+- [https://julialang.org/learning/]()
+- [bitbucket](https://www.atlassian.com/git/tutorials), [gitlab](https://www.tutorialspoint.com/gitlab/index.htm), etc.
 
-### exercise #0
+### exercise #0 -- GitHub Hello World
 
 Follow the directions in [Hello World](https://guides.github.com/activities/hello-world/) using your web-browser and your own laptop -- i.e., **not** the `binder` / `jupyterlab` cloud instance used for the rest of the exercises
 
-### exercise #1
+### exercise #1 -- Command Line Git
 
 In the Jupyter lab side bar, or the launcher pane, click to launch a terminal window where you will be able to type:
 
@@ -97,12 +97,13 @@ git status
 git diff
 git diff
 git remote -v
+...
 ```
 
 Next we will try `git commit` ...
 
 
-### exercise #2
+### exercise #2 -- Command Line & Unit Tests
 
 Download, compile, and run MITgcm on one of the unit tests:
 
@@ -151,7 +152,7 @@ julia> pathof(IndividualDisplacements)
 You can also remove the package from the Julia environment 
 
 
-### exercise #3
+### exercise #3 -- Practical Collaboration Setup
 
 The approach described in the [MITgcm manual's](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html) is a typical, practical collaborative  model. The basic configuration is depicted below and your exercise is to set this up for the repo from the class. 
 
@@ -186,6 +187,6 @@ Pair up, setup the structure of **example 3** for each other's repo, and practic
 
 Overload heatmap to set color scale for a custom array data type that contains a range.
 
-
+`MeshArrays.jl`, `IndividualDisplacements.jl`, Forget & Ferreira 2019
 
 
