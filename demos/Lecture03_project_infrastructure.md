@@ -42,8 +42,8 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 	- automation: [Travis CI](https://docs.travis-ci.com)
 - packages
 	- creating (**exercise 4**), registering, & distributing
-	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), `PkgTemplates.jl` and `registries` in Julia
-	- environmments / dependencies / `.julia/`
+	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), [PkgTemplates.jl](https://invenia.github.io/PkgTemplates.jl/stable/)
+	- environmments / dependencies inside `.julia/` and packages 
 	- Julia registrator and tag bots (~ github apps)
 
 ## 2. Maintain and reproduce your results
@@ -53,10 +53,11 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
 	- doi, zenodo, dataverse vs ftp, html, cloud hosting
 - maintainance & user support
-	- [Mastering Issues](https://guides.github.com/features/issues/)
+	- [Mastering Issues](https://guides.github.com/features/issues/) help
 	- Help with pull requests, Issues
 	- Regular, continued unit testing
 	- Keep up with dependency updates
+	- debuggers [like this one](https://github.com/JuliaDebug/Debugger.jl)
 	- documentation ...
 - collaborators, modularity, coding practices, reuse vs recode, etc
 	- [Mastering Forks](https://guides.github.com/activities/forking/)
@@ -70,7 +71,8 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 - [https://www.youtube.com/user/JuliaLanguage]()
 - [mybinder.org]() by itself
 - [https://julialang.org/learning/]()
-- [bitbucket](https://www.atlassian.com/git/tutorials), [gitlab](https://www.tutorialspoint.com/gitlab/index.htm), etc.
+- Besides github: [bitbucket](https://www.atlassian.com/git/tutorials), [gitlab](https://www.tutorialspoint.com/gitlab/index.htm), etc.
+- Besides jupyter: e.g. [atom and juno](https://junolab.org)
 
 ### exercise #0 -- GitHub Hello World
 
@@ -140,7 +142,7 @@ julia> (Rini,Rend,DXCsm,DYCsm)=MeshArrays.demo2()
 julia> show(Rend)
 ```
 
-To finish this exercise, install a registered package directly via `Julia` package manager. 
+To finish this exercise, install a registered package directly via `Julia` package manager instead. 
 
 Where did it get installed though? See:
 
@@ -149,7 +151,40 @@ julia> using IndividualDisplacements
 julia> pathof(IndividualDisplacements)
 ```
 
-You can also remove the package from the Julia environment 
+You can also remove the package from the Julia environment ... 
+
+Let's look inside a repo and package:
+
+```
+$ ls -la MIT-PraCTES/
+total 8804
+drwxr-xr-x 5 jovyan root      4096 Jan 17 14:49 .
+drwxr-xr-x 1 jovyan jovyan    4096 Jan 17 14:49 ..
+drwxr-xr-x 2 jovyan root      4096 Jan 17 14:49 binder
+drwxr-xr-x 5 jovyan root      4096 Jan 17 14:49 demos
+-rw-r--r-- 1 jovyan root      8196 Jan 17 14:49 .DS_Store
+drwxr-xr-x 8 jovyan root      4096 Jan 17 14:49 .git
+-rw-r--r-- 1 jovyan root        32 Jan 17 14:49 .gitignore
+-rw-r--r-- 1 jovyan root   8965457 Jan 17 14:49 PraCTES_flyer.jpg
+-rw-r--r-- 1 jovyan root      2131 Jan 17 14:49 README.md
+-rw-r--r-- 1 jovyan root        32 Jan 17 14:49 resources.md
+-rw-r--r-- 1 jovyan root      2832 Jan 17 14:49 schedule.md
+$ ls -la MeshArrays.jl/
+total 52
+drwxr-xr-x 6 jovyan root   4096 Jan 17 14:50 .
+drwxr-xr-x 1 jovyan jovyan 4096 Jan 17 14:50 ..
+drwxr-xr-x 4 jovyan root   4096 Jan 17 14:50 docs
+drwxr-xr-x 8 jovyan root   4096 Jan 17 14:50 .git
+-rw-r--r-- 1 jovyan root     82 Jan 17 14:50 .gitignore
+-rw-r--r-- 1 jovyan root   1163 Jan 17 14:50 LICENSE.md
+-rw-r--r-- 1 jovyan root   1429 Jan 17 14:50 Manifest.toml
+-rw-r--r-- 1 jovyan root    464 Jan 17 14:50 Project.toml
+-rw-r--r-- 1 jovyan root   2457 Jan 17 14:50 README.md
+-rw-r--r-- 1 jovyan root     10 Jan 17 14:50 REQUIRE
+drwxr-xr-x 2 jovyan root   4096 Jan 17 14:50 src
+drwxr-xr-x 2 jovyan root   4096 Jan 17 14:50 test
+-rw-r--r-- 1 jovyan root   1430 Jan 17 14:50 .travis.yml
+```
 
 
 ### exercise #3 -- Practical Collaboration Setup
@@ -175,11 +210,13 @@ In the future this will allow you to **merge** updates from upstream into your l
 
 <img src="https://mitgcm.readthedocs.io/en/latest/_images/git_setup.svg" width="50%">
 
-### exercise #4a
+### exercise #4a -- Create a package
 
 Create a julia package, add tests, add docs push to your github account
 
-### exercise #4b
+[https://julialang.github.io/Pkg.jl/v1/creating-packages/]()
+
+### exercise #4b -- Collaborate on pkg
 
 Pair up, setup the structure of **example 3** for each other's repo, and practice `git branch`, `git commit`, `git push`, `PRs`, `git merge`, etc on the practice repo from **example 4a**.
 
@@ -187,6 +224,12 @@ Pair up, setup the structure of **example 3** for each other's repo, and practic
 
 Overload heatmap to set color scale for a custom array data type that contains a range.
 
-`MeshArrays.jl`, `IndividualDisplacements.jl`, Forget & Ferreira 2019
+Some of the way `Julia` differs from `Python`: type system, function _are objects_, type annotations, multiple dispatch, broadcasting, unicode, ...
 
+### exercise #6
 
+Install and try [jupytext](https://jupytext.readthedocs.io/en/latest/install.html) in the Jupyter lab environments or on your laptop
+
+### exercise #7 
+
+Mix and Match packages to create something new. E.g. `Juls.jl`, `MeshArrays.jl`, `IndividualDisplacements.jl`, compute transports (e.g. [Forget & Ferreira 2019](https://doi.org/10.1038/s41561-019-0333-7)).
