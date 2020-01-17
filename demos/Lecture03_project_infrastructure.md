@@ -27,23 +27,25 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia.
 	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as an alternative.
 	- GitHub PRs & issues
-- version control (git, blame, commit, releases, ... pkg registry/manager)
+- version control
 	- [git-handbook](https://guides.github.com/introduction/git-handbook/)
 	- [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl)
-	- via the github GUI (blame, commits, releases)
-	- package registries & package managers
-	- dependencies & compatibility constraints
-- unit testing (ref result, formulate test, computer, ... automation, travis)
+	- via the github GUI (e.g. history, blame, commits, releases)
+	- package registries & package managers (e.g. `Pkg.jl`)
+	- dependencies & compatibility constraints (e.g. `*.toml`)
+- unit testing 
+	- reference result, test formula, computer
 	- **exercise 2** gives two examples
-	- [Travis CI](https://docs.travis-ci.com)
-- archiving (doi, zenodo, dataverse ... vs ftp, html, cloud hosting)
+	- automation: [Travis CI](https://docs.travis-ci.com)
+- archiving 
 	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
 	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
-- registering and distributing a package
+	- doi, zenodo, dataverse vs ftp, html, cloud hosting
+- packages
+	- creating, registering, & distributing
 	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), `PkgTemplates.jl` and `registries` in Julia
 	- environmments / dependencies / `.julia/`
-	- [mybinder.org]() by itself
-	- ...
+	- Julia registrator and tag bots (~ github apps)
 
 ## 2. Maintain and reproduce your results
 
@@ -68,6 +70,7 @@ _**Note: this file is work in progress -- further modifications & cleanup are ex
 - Check out these other tools: aws, docker, slack, overleaf, nextjournal, jupytext, [youtube](https://www.youtube.com/watch?v=RDxAy_zSUvg&feature=youtu.be), ...
 - [https://opensource.guide/how-to-contribute/]()
 - [https://www.youtube.com/user/JuliaLanguage]()
+- [mybinder.org]() by itself
 
 ### exercise #0
 
