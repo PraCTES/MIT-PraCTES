@@ -90,36 +90,48 @@ cd MIT-PraCTES
 ls -la
 ```
 
-In the Jupyter lab side bar (not the open terminal pane), double click on `demos/README.md` to open it the build in text editor. Add a blank line, save, and close the file. 
-
-Then go back to the open terminal pane, and type:
+In the Jupyter lab side bar (not the open terminal pane), double click on `demos/README.md` to open it the build in text editor. Add a blank line, save, and close the file. Then go back to the open terminal pane, and create a new folder that we will then turn into a git repository. 
 
 ```
+cd ~
+mkdir test20200117
+cd test20200117
+```
+
+`git init` is next -- it will set up `git` to track files inside the `test20200117/` folder. Try `ls -la` before and after to see the hidden `.git/` folder appear. The sequence of commands reprted below further creates an empty file (`touch readme`), makes git track this file (`git add`), and then saves the file (`git commit`). 
+
+The final command will ask for a username and email once -- this is the key information that git uses for its book-keeping and attribute authorship to contributions inside the `.git/` folder.
+
+```
+git init
 git status
-git diff
-git diff
-git remote -v
-...
+touch readme
+git status
+git add readme
+git status
+git commit -m "initial commit"
 ```
 
-Next we will try `git commit` ...
+The `git status` commands were inserted several time for demonstrative purposes. `git log` ... 
 
+Next is `git remote` then `git push` ... 
 
 ### exercise #2 -- Command Line & Unit Tests
 
 Download, compile, and run MITgcm on one of the unit tests:
 
 ```
-cd ~
-git clone https://github.com/MITgcm/MITgcm
-cd MITgcm/verification/
-./testreport -t advect_cs
+$ cd ~
+$ git clone https://github.com/MITgcm/MITgcm
+$ cd MITgcm/verification/
+$ ./testreport -t advect_cs
 ```
 
 Download a `Julia` package (e.g. `MeshArrays.jl`) from github and start julia.
 
 ```
 $ git clone https://github.com/gaelforget/MeshArrays.jl
+$
 $ julia
                _
    _       _ _(_)_     |  Documentation: https://docs.julialang.org
@@ -132,9 +144,23 @@ $ julia
 julia> 
 ```
 
-Then in the terminal window you can access the package manager using the `]` stroke. Type `] add MeshArrays.jl` followed by `] test MeshArrays`.
+This is the basic julia mode where you can execute operations (e.g. try `julia> 1+1` & return). One can access the package manager mode by typing `]`. Then `pkg> add MeshArrays.jl` & return will add the chosen package to the `Julia` environment. 
 
-To come back to the normal `julia>` prompt use the `esc` stroke. You can then start using the `Mesharrays.jl` package. For example:
+In package manager mode (`]`), one can then run the unit tests for this package using `test MeshArrays`. If all unit tests were successful, the final display should look something like this:
+
+```
+   Testing MeshArrays
+ Resolving package versions...
+    Status `/tmp/jl_8pEyMo/Manifest.toml`
+  [81a5f4ea] CatViews v1.0.0
+  [cb8c808f] MeshArrays v0.2.4
+...
+Test Summary:     | Pass  Total
+MeshArrays tests: |   15     15
+   Testing MeshArrays tests passed 
+```
+
+To leave the package mode and go back to the basic `julia>` prompt hit the `esc` keystroke. You can then start using the `Mesharrays.jl` package that we just been added. For example:
 
 ```
 julia> using MeshArrays
@@ -142,37 +168,23 @@ julia> (Rini,Rend,DXCsm,DYCsm)=MeshArrays.demo2()
 julia> show(Rend)
 ```
 
-To finish this exercise, install a registered package directly via `Julia` package manager instead. 
-
-Where did it get installed though? See:
+To access the documentation of a function in Julia one can just type `?` followed by e.g. the name of the package / module followed by the function name (e.g. `?MeshArrays.demo2`). This will print out the `docstring` which is inside the package code, just next to the `demo2` function definition (see [the julia docs](https://docs.julialang.org/en/v1/manual/documentation/index.html) for detail).
 
 ```
-julia> using IndividualDisplacements
-julia> pathof(IndividualDisplacements)
+help?> MeshArrays.demo2
+  demo2()
+
+  Demonstrate higher level functions using smooth. Call sequence:
+
+  (Rini,Rend,DXCsm,DYCsm)=MeshArrays.demo2();
 ```
 
-You can also remove the package from the Julia environment ... 
-
-Let's look inside a repo and package:
+Now let's look inside the Julia package we have downloaded. We see a `.git` as before but also a documentation folder, `docs/`, and the `src/` folder where the code is. The `*.toml` files document the package dependencies and the `.travis.yml` file is used to automate the unit testing via the [https://travis-ci.org/]() cloud service. 
 
 ```
-$ ls -la MIT-PraCTES/
-total 8804
-drwxr-xr-x 5 jovyan root      4096 Jan 17 14:49 .
-drwxr-xr-x 1 jovyan jovyan    4096 Jan 17 14:49 ..
-drwxr-xr-x 2 jovyan root      4096 Jan 17 14:49 binder
-drwxr-xr-x 5 jovyan root      4096 Jan 17 14:49 demos
--rw-r--r-- 1 jovyan root      8196 Jan 17 14:49 .DS_Store
-drwxr-xr-x 8 jovyan root      4096 Jan 17 14:49 .git
--rw-r--r-- 1 jovyan root        32 Jan 17 14:49 .gitignore
--rw-r--r-- 1 jovyan root   8965457 Jan 17 14:49 PraCTES_flyer.jpg
--rw-r--r-- 1 jovyan root      2131 Jan 17 14:49 README.md
--rw-r--r-- 1 jovyan root        32 Jan 17 14:49 resources.md
--rw-r--r-- 1 jovyan root      2832 Jan 17 14:49 schedule.md
 $ ls -la MeshArrays.jl/
 total 52
-drwxr-xr-x 6 jovyan root   4096 Jan 17 14:50 .
-drwxr-xr-x 1 jovyan jovyan 4096 Jan 17 14:50 ..
+...
 drwxr-xr-x 4 jovyan root   4096 Jan 17 14:50 docs
 drwxr-xr-x 8 jovyan root   4096 Jan 17 14:50 .git
 -rw-r--r-- 1 jovyan root     82 Jan 17 14:50 .gitignore
@@ -186,14 +198,22 @@ drwxr-xr-x 2 jovyan root   4096 Jan 17 14:50 test
 -rw-r--r-- 1 jovyan root   1430 Jan 17 14:50 .travis.yml
 ```
 
+If you go to the [repo on github.com](https://github.com/gaelforget/MeshArrays.jl) then the landing page should show a `README.md` (scroll down maybe) with a `build` badge. Clicking on this badge will get you to the results of automated unit tests generated using the [https://travis-ci.org/]() cloud service. The docs badge will in turn lead you to the [hosted documentation](https://gaelforget.github.io/MeshArrays.jl/stable/) based on what's in `docs/`.
+
+To take this exercise a git further, let's now install a registered package by typing `]` then `add IndividualDisplacements.jl`. Notice that `julia`'s package manager takes care of the `git clone` part for registered packages. Wondering where the package got downloaded? Press `esc` then type `pathof(IndividualDisplacements)` to find out.
+
+Finally:
+
+- To display the list of packages currently installed : type `]` then `st`.
+- To remove a packages from `julia` : `]` then e.g. `git rm IndividualDisplacements.jl `. 
 
 ### exercise #3 -- Practical Collaboration Setup
 
 The approach described in the [MITgcm manual's](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html) is a typical, practical collaborative  model. The basic configuration is depicted below and your exercise is to set this up for the repo from the class. 
 
-You will first want to fork (github), clone (terminal), and branch (terminal) [as explained here](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html). 
+To this end, you will first fork (github), clone (terminal), and branch (terminal) [as explained here](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html). 
 
-Then, in ther terminal, you will want to run:
+Then, in the terminal window, execute the following command:
 
 `git remote add upstream https://github.com/PraCTES/MIT-PraCTES`
 
@@ -202,33 +222,32 @@ This will allow you to
 - 1. modify codes and **commit** this changes to your **local branch** (on your laptop, e.g. all offline)
 - 2. **push** your branch back to your repo on `Github.com` and possibly see your changes **merged in the upstream repo** repo via a **pull request**.
 
-But imagine a scenario where multiple people are doing this and changes happen in the main repo when your are in the middle of doing your changes to the code?
+But imagine a scenario where multiple people are doing this and code changes happen in the main repo while you were in the middle of doing your changes to the code? No panic -- that is why the above schematic shows a connection between upstream and your local clone. 
 
-That is why the schematic shows a connection between upstream and your local clone. The `pull upstream` command effectively downloads the updated repo to your local clone. 
-
-In the future this will allow you to **merge** updates from upstream into your local branch. We will do this in **exercise #4b** using a practice repo.
+The `pull upstream` command effectively brings the latest updates from the main repo to your local copy /clone clone. This will then allow you to **merge** these updates from upstream into your local branches, and then push them to your online repo (see [this doc](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html)). We will do this in **exercise #4b** using a practice repo.
 
 <img src="https://mitgcm.readthedocs.io/en/latest/_images/git_setup.svg" width="50%">
 
 ### exercise #4a -- Create a package
 
-Create a julia package, add tests, add docs push to your github account
-
-[https://julialang.github.io/Pkg.jl/v1/creating-packages/]()
+Create a julia package, add tests, add docs, and push to your github account following [this guide](https://julialang.github.io/Pkg.jl/v1/creating-packages/)
 
 ### exercise #4b -- Collaborate on pkg
 
-Pair up, setup the structure of **example 3** for each other's repo, and practice `git branch`, `git commit`, `git push`, `PRs`, `git merge`, etc on the practice repo from **example 4a**.
+- 1. Pair up and setup the structure depicted in **example 3** using one-another's repo from **example 4a** as the `main repo`. 
+- 2. Use `git branch`, `git commit`, `git push`, `PRs`, `git merge`, etc back and forth between your two github accounts using your own laptops for command-line git.
 
 ### exercise #5
 
-Overload heatmap to set color scale for a custom array data type that contains a range.
+Overload `Julia`'s `heatmap` function from the `Plots.jl` package to set color scale to pre-specified ranges when this information is build into a custom array type. We did something similar in `session #2` using `Python`. 
 
-Some of the way `Julia` differs from `Python`: type system, function _are objects_, type annotations, multiple dispatch, broadcasting, unicode, ...
+Here we want to highlight some of the key aspects in which `Julia` differs from `Python`: type system, _functions are objects_, type annotations, multiple dispatch, broadcasting, unicode, ...
+
+Let's first define a custom array data type that contains a range...
 
 ### exercise #6
 
-Install and try [jupytext](https://jupytext.readthedocs.io/en/latest/install.html) in the Jupyter lab environments or on your laptop
+Install and try [jupytext](https://jupytext.readthedocs.io/en/latest/install.html) in the Jupyter lab environments or on your laptop. Using the paired _light scripts_ appraoch where `.jl` files are kept in sync with your notebooks (as in [this example](https://github.com/gaelforget/MeshArrayNotebooks)) can make it easier to trace back changes made to jupyter notebooks using `git` and `github`.
 
 ### exercise #7 
 
