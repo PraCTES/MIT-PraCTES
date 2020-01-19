@@ -15,6 +15,8 @@ This session focuses on tools and methods (_section 1._) that make it easy to or
 - the listed webpages and documentations.
 - the exercises using our [cloud instance](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab).
 
+**After this session, please consider** helping us maintain and improve the repo material by reporting potential bugs, typos, broken links, oversights, etc. or suggest ways to improve it via [our issue tracker](https://github.com/PraCTES/MIT-PraCTES/issues) and [pull requests](https://github.com/PraCTES/MIT-PraCTES/pulls). This repo itself is an example of the framework described in this session -- the project was build collectively and welcomes new contributors.
+
 ![](https://github.blog/wp-content/uploads/2019/01/Community-Updated-2X.png?resize=1024,611)         |  ![](https://image.slidesharecdn.com/ci-131213183852-phpapp01/95/github-travis-ci-coveralls-maven-ci2-19-638.jpg)
 :------------------------------:|:---------------------------------:
 ![](https://camo.githubusercontent.com/6d7260eaa159cfb838b45bf168ff77adecf8b198/68747470733a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67)  |  ![](https://insights.tuhh.de/wp-content/uploads/2019/02/jupyter-workflow-973x1024.png)
@@ -25,23 +27,25 @@ This session focuses on tools and methods (_section 1._) that make it easy to or
 	- Get started with [GitHub](https://github.com/) & [command-line git](https://education.github.com/git-cheat-sheet-education.pdf) in **exercise 0**
 	- Get more familiar with command-line tools (**exercise 2**)
 	- Organization examples: [MITgcm](https://github.com/mitgcm), [JuliaDynamics](https://github.com/juliadynamics), [JuliaClimate](https://github.com/JuliaClimate)
-	- Repo examples: [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl), [JuliaClimate repo](https://github.com/meta)
-	- App examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
+	- Repository (_repo_) examples: [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl), [JuliaClimate repo](https://github.com/meta)
+	- Application (_App_) examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
 	
-_Notes:_ Linked repos provide examples of how _pull requests_, _git commits_, _issue trackers_, _stars_, etc provide user-friendly ways to collaborate on computational projects, document code changes and related discussions, etc. and maintain them through time.
+Linked repos should illustrate how _pull requests_, _git commits_, _issue trackers_, _stars_, etc provide user-friendly tools to collaborate on computational projects, document codes, their revisions, related discussions, etc., get feedback, bug reports, help, etc., ... from users and maintain established capabilities through time while software evolves and contributors may come and go. Please take a look and don't hesitate to [get involved](https://guides.github.com/activities/socialize/) e.g. using the [issue trackers](https://guides.github.com/features/issues/) to give feedback.
 
 - documentation 
-	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/), [MacDown](https://macdown.uranusjr.com/) app for macOS.
-	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia.
-	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as an alternative.
-	- pull requests, issues, star, watch as documentation (see repo examples).
+	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/); e.g., [MacDown app](https://macdown.uranusjr.com/) for macOS
+	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia (for Python, see lecture 2)
+	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as an alternative (any language)
 
-- version control
+Pull requests, issues, star, watch, etc. on [Github.com]() are also documentation (e.g. in repo examples). [Version control](https://en.wikipedia.org/wiki/Version_control) is a widely used approach people use to document file changes through time. `git` is a big part of it but there is more! 
+
+- version control 
 	- [git-handbook](https://guides.github.com/introduction/git-handbook/) tutorial from GitHub
 	- [the github GUI](https://github.com/PraCTES/MIT-PraCTES) (e.g. history, blame, commits, releases; see repo examples)
-	- [package registries](https://github.com/JuliaRegistries/General) & [package managers](https://julialang.github.io/Pkg.jl/v1/) (in python: conda, pip, etc).
-	- dependencies & compatibility constraints (e.g. `*.toml`)
-	- scripts (git) vs notebooks (jupytext) vs binary (dataverse)
+	- packages (see below), [package registries](https://github.com/JuliaRegistries/General) & [package managers](https://julialang.github.io/Pkg.jl/v1/) (for Python, conda, pip, etc).
+	- dependencies & compatibility constraints (e.g. `*.toml` in `Julia`)
+
+Scripts (git) vs notebooks (jupytext) vs binary (dataverse) ...
 
 - unit testing 
 	- reference result, test formula, computer
@@ -81,7 +85,17 @@ All of the exercises can be done using the cloud-based environment included in t
 
 This method is freely provided by [mybinder.org]() and it uses the [jupyterlab](https://jupyterlab.readthedocs.io/en/stable/) interface in your web browser (_tip: hrome seems to work well for this_). You can also use your own computer if that's more convenient though.
 
-### Exercise #0 -- GitHub Hello World
+**List Of Exercises**
+
+- 0. Hello GitHub World
+- 1. Command Line Git
+- 2. Command Line & Unit Tests
+- 3. Practical Collaboration Setup
+- 4. Create a package and collaborate
+- 5. Start a Julia project and start coding
+- 6. tracking changes with jupytext
+
+### Exercise #0 -- Hello GitHub World
 
 Follow the directions in the [Hello World](https://guides.github.com/activities/hello-world/) guide using your web-browser and your own laptop -- i.e., **not** the `binder` / `jupyterlab` cloud instance used for the rest of the exercises. 
 
@@ -241,12 +255,16 @@ The `pull upstream` command effectively brings the latest updates from the main 
 
 Create a julia package, add tests, add docs, and push to your github account following [this guide](https://julialang.github.io/Pkg.jl/v1/creating-packages/)
 
-### Exercise #4b -- Collaborate on pkg
+### Exercise #4b -- Collaborate on a package
 
 - 1. Pair up and setup the structure depicted in **example 3** using one-another's repo from **example 4a** as the `main repo`. 
 - 2. Use `git branch`, `git commit`, `git push`, `PRs`, `git merge`, etc back and forth between your two github accounts using your own laptops for command-line git.
 
-### Exercise #5
+### Exercise #5a -- Start a Julia project
+
+Mix and Match packages to create something new. E.g. `Juls.jl`, `MeshArrays.jl`, `IndividualDisplacements.jl`, compute transports (e.g. [Forget & Ferreira 2019](https://doi.org/10.1038/s41561-019-0333-7)).
+
+### Exercise #5b -- Define A Julia Function
 
 Overload `Julia`'s `heatmap` function from the `Plots.jl` package to set color scale to pre-specified ranges when this information is build into a custom array type. We did something similar in `session #2` using `Python`. 
 
@@ -254,13 +272,9 @@ Here we want to highlight some of the key aspects in which `Julia` differs from 
 
 Let's first define a custom array data type that contains a range...
 
-### Exercise #6
+### Exercise #6 -- tracking changes using jupytext
 
 Install and try [jupytext](https://jupytext.readthedocs.io/en/latest/install.html) in the Jupyter lab environments or on your laptop. Using the paired _light scripts_ appraoch where `.jl` files are kept in sync with your notebooks (as in [this example](https://github.com/gaelforget/MeshArrayNotebooks)) can make it easier to trace back changes made to jupyter notebooks using `git` and `github`.
-
-### Exercise #7 
-
-Mix and Match packages to create something new. E.g. `Juls.jl`, `MeshArrays.jl`, `IndividualDisplacements.jl`, compute transports (e.g. [Forget & Ferreira 2019](https://doi.org/10.1038/s41561-019-0333-7)).
 
 ### Additional Resources
 
