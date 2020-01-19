@@ -25,59 +25,67 @@ This session focuses on tools and methods (_section 1._) that make it easy to or
 
 - github ~ git + social networking + apps / cloud services
 	- Get started with [GitHub](https://github.com/) & [command-line git](https://education.github.com/git-cheat-sheet-education.pdf) in **exercise 0**
-	- Get more familiar with command-line tools (**exercise 2**)
+	- Get more familiar with command-line tools (**exercises 1, 2**)
 	- Organization examples: [MITgcm](https://github.com/mitgcm), [JuliaDynamics](https://github.com/juliadynamics), [JuliaClimate](https://github.com/JuliaClimate)
 	- Repository (_repo_) examples: [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl), [JuliaClimate repo](https://github.com/meta)
 	- Application (_App_) examples: [GitHub Help](https://help.github.com/en/github/authenticating-to-github/authorizing-oauth-apps), [zenodo](https://zenodo.org), [Travis CI](https://travis-ci.org)
 	
-Linked repos should illustrate how _pull requests_, _git commits_, _issue trackers_, _stars_, etc provide user-friendly tools to collaborate on computational projects, document codes, their revisions, related discussions, etc., get feedback, bug reports, help, etc., ... from users and maintain established capabilities through time while software evolves and contributors may come and go. Please take a look and don't hesitate to [get involved](https://guides.github.com/activities/socialize/) e.g. using the [issue trackers](https://guides.github.com/features/issues/) to give feedback.
+Linked repos should illustrate how _pull requests_, _git commits_, _issue trackers_, _stars_, etc provide user-friendly tools to collaborate on computational projects, document codes, their revisions, related discussions, etc., get feedback, bug reports, help, etc., ... from users and maintain established capabilities through time while software evolves and contributors may come and go. Take a look and don't hesitate to [get involved](https://guides.github.com/activities/socialize/) e.g. using the [issue trackers](https://guides.github.com/features/issues/) to give feedback.
 
 - documentation 
 	- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/); e.g., [MacDown app](https://macdown.uranusjr.com/) for macOS
-	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia (for Python, see lecture 2)
-	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as an alternative (any language)
+	- [Documenter.jl](https://juliadocs.github.io/Documenter.jl/stable/) & [docstrings](https://docs.julialang.org/en/v1/manual/documentation/index.html) in Julia (for Python, see lecture 2; for Matlab / Octave see [1](https://www.mathworks.com/help/matlab/matlab_prog/add-help-for-your-program.html), [2](https://octave.org/doc/v4.0.1/Function-Headers.html#Function-Headers), [3](https://octave.org/doc/v4.0.1/Documentation-Tips.html))
+	- [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [readthedocs](https://readthedocs.org) as a general alternative (e.g., a model [configuration](https://eccov4.readthedocs.io/en/latest/?badge=latest) or [source code](https://mitgcm.readthedocs.io/en/latest/?badge=latest))
 
-Pull requests, issues, star, watch, etc. on [Github.com]() are also documentation (e.g. in repo examples). [Version control](https://en.wikipedia.org/wiki/Version_control) is a widely used approach people use to document file changes through time. `git` is a big part of it but there is more! 
+Pull requests, issues, star, watch, etc. on [Github.com]() are also documentation (e.g. in repo examples). [Version control](https://en.wikipedia.org/wiki/Version_control) is a widely used approach to documenting file changes through time. `git` is a big part of it but there is more! 
 
 - version control 
-	- [git-handbook](https://guides.github.com/introduction/git-handbook/) tutorial from GitHub
-	- [the github GUI](https://github.com/PraCTES/MIT-PraCTES) (e.g. history, blame, commits, releases; see repo examples)
-	- packages (see below), [package registries](https://github.com/JuliaRegistries/General) & [package managers](https://julialang.github.io/Pkg.jl/v1/) (for Python, conda, pip, etc).
-	- dependencies & compatibility constraints (e.g. `*.toml` in `Julia`)
+	- [Version control](https://en.wikipedia.org/wiki/Version_control); e.g. [git-handbook](https://guides.github.com/introduction/git-handbook/) tutorial from GitHub
+	- in **Exercise 3** you set up a practical collaborative framework using [GitHub.com]()
+	- [the github GUI](https://github.com/PraCTES/MIT-PraCTES) (e.g. file history, blame, commits, forks, PRs; see repo examples)
+	- git tags & releases, [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning), [Digital Object Idenfifier (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier), e.g. [zenodo.org](https://zenodo.org) (section 2)
+	- within this repo, e.g., `Julia` dependencies & versions are specified in `binder/*.toml` 
+	- This approach is commonly used for packages (see below).
+	- In **Exercise 4** you will create these files using `Julia`
 
-Scripts (git) vs notebooks (jupytext) vs binary (dataverse) ...
+In **Exercises 1, 2** you already started doing version control using command line git. While **Exercise 3** is about collaboration, version control is also very useful for private projects -- after a while it may become a reflex to do this for all codes that you won't throw away. `git` works best with small text files (e.g., plain julia code), but other services apply a similar approach to data sets (e.g., dataverse), and jupyter notebooks can be converted plain code (e.g., jupytext).
 
-- unit testing 
-	- reference result, test formula, computer
-	- **exercise 2** provides examples
-	- in **exercise 4** you try it yourself
-	- automation: [Travis CI](https://docs.travis-ci.com)
+- regression / unit testing 
+	- in **Exercise 2** you run examples
+	- in **Exercise 4** you make your own
+	- automation, in the cloud, is made easy by e.g. [Travis CI](https://docs.travis-ci.com)
+
+[Regression testing](https://en.wikipedia.org/wiki/Regression_testing) often goes something like this: create reference result, formulate comparison with reference result, implement test & automate; check test results before comitting code changes (or merging a PR). This very common approach is often required for packages (see below). However, you can also do this to ensure that a model solution re-run  accurately reproduces the original (e.g., see [Forget et al. 2015](https://www.geosci-model-dev.net/8/3071/2015/) & [this doc](https://eccov4.readthedocs.io/en/latest/)) or indeed for any other computation (e.g. in lecture 2).
 
 - packages
-	- see previous lecture for `'python` examples. Here is a [Julia example](https://github.com/gaelforget/IndividualDisplacements.jl)
-	- creating (**exercise 4**), registering, versioning, archiving, and distributing
-	- [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/), [PkgTemplates.jl](https://invenia.github.io/PkgTemplates.jl/stable/)
-	- environmments / dependencies inside `.julia/` and packages 
-	- releases, semantic versioning, DOI / zenodo
-	- Julia registrator and tag bots / apps
+	- Here is a [Julia example](https://github.com/gaelforget/IndividualDisplacements.jl). For `Python`, see lecture 2. For [GNU Octave](https://www.gnu.org/software/octave/) / `Matlab` see [this doc](https://octave.org/doc/interpreter/Installing-and-Removing-Packages.html).
+	- In **Exercise 4** you create, version control, upload, and archive a `Julia` package.
+	- Section 2 touches on registries, archives, hosting, and continuous integration.
+	- In `Julia`, we use [Pkg.jl](https://julialang.github.io/Pkg.jl/v1/) & e.g.   [PkgTemplates.jl](https://invenia.github.io/PkgTemplates.jl/stable/). In `Python`, we use [conda](https://docs.conda.io/en/latest/), pip, etc.
+
+_Environmments_ and compatibility constraints are general approaches to deal with dependencies across a galaxy of packages that may all evolving in parallel. Packages are a bit of a special case but the same information can in principle be attached to any project. In this repo this information is put inside the `binder/` folder (e.g. in the `*.toml` files for `julia`). This allows `mybinder.org` to know what packages, and versions should be installed in the `jupuyterlab` instance so that all users have the same environment.
 
 ## 2. Maintain And Reproduce Your Results
 
-- archiving and versioning
+- archiving and registering
 	- [Making Your Code Citable](https://guides.github.com/activities/citable-code/)
 	- [Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) or [zenodo](http://doi.org/10.5281/zenodo.3461529) for data sets
 	- doi, zenodo, dataverse vs ftp, html, cloud hosting
+	- registering packages; e.g. `Julia` 's [package registries](https://github.com/JuliaRegistries/General) 
+	- Julia registrator and tag bots / apps
 - maintainance & user support
-	- [Mastering Issues](https://guides.github.com/features/issues/) help
+	- [Mastering Issues](https://guides.github.com/features/issues/)
 	- Help with pull requests, Issues
 	- Regular, continued unit testing
 	- Keep up with dependency updates
 	- debuggers [like this one](https://github.com/JuliaDebug/Debugger.jl)
 	- documentation ...
 - collaborators, modularity, coding practices, reuse vs recode, etc
-	- [Mastering Forks](https://guides.github.com/activities/forking/)
-	- **exercise 3**
-- Real-Life Examples [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) & [ECCO](https://eccov4.readthedocs.io/en/latest/?badge=latest) of stuff you should be able to re-run anytime
+	- The [Mastering Forks](https://guides.github.com/activities/forking/) guide is a good place to learn a bit more.
+	- In **Exercise 3** you set up a practical collaborative framework
+
+
+A couple real-life examples to finish : [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) has been maintaining and reproducing results for 20+ years (**Exercise 2**); [ECCO version 4 release 2](https://eccov4.readthedocs.io/en/latest/?badge=latest) is a global ocean model solution (1992-2011) generated more than 4 years ago that remains easy to reproduce accurately. 
 
 ## 3. Exercises & Additional Ressources
 
@@ -254,6 +262,8 @@ The `pull upstream` command effectively brings the latest updates from the main 
 ### Exercise #4a -- Create a package
 
 Create a julia package, add tests, add docs, and push to your github account following [this guide](https://julialang.github.io/Pkg.jl/v1/creating-packages/)
+
+```cat binder/Project.toml```
 
 ### Exercise #4b -- Collaborate on a package
 
