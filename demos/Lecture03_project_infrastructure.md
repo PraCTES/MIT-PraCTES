@@ -2,7 +2,7 @@
 
 # Organizing version-controlled, reproducible, and efficient scientific projects
 
-This session focuses on tools and methods (_section 1._) that make it easy to organize, share, reproduce, and maintain your scientific computations and collaborate with others on code (_s. 2._). Representative examples are provided to illustrate these tools at work. Self-guided exercises are found at the end of this file. 
+This session focuses on tools and methods (_section 1._) that make it easy to organize, share, reproduce, and maintain your scientific computations and collaborate with others on code (_s. 2._). Representative examples are provided to illustrate these tools at work. Self-guided exercises are found at the end. 
 
 **Table of contents**
 
@@ -85,9 +85,22 @@ _Environmments_ and compatibility constraints are general approaches to deal wit
 	- In **Exercise 3** you set up a practical collaborative framework
 
 
-A couple real-life examples to finish : [MITgcm](http://mitgcm.readthedocs.io/en/latest/?badge=latest) has been maintaining and reproducing results for 20+ years (**Exercise 2**); [ECCO version 4 release 2](https://eccov4.readthedocs.io/en/latest/?badge=latest) is a global ocean model solution (1992-2011) generated more than 4 years ago that remains easy to reproduce accurately. 
+## 3. Examples From EAPS (incl. Models & Papers)
 
-## 3. Exercises & Additional Ressources
+Here we focus on examples that we know well and we feel are representative of the approaches outlined in this lecture -- each one of them in its own, often imperfect ways. Many, many other examples are available on `GitHub.com` and elsewhere. Every project may do things slightly differently, so it's great look around, and please don't hesitate to let us know if you find a good example that you think should be listed in this doc.
+
+- The [MIT general circulation model](http://mitgcm.readthedocs.io/en/latest/?badge=latest) (`MITgcm`) is a widely used research tool primarily that simulates the Ocean circulation and related processes. It has been developed collaboratively by a community distributed around the world over 20+ years. This community, led by @jm_c, has been maintaining established model functionalities and reproducing reference results all along (e.g. **Exercise 2**), while revising and improving the code continuously, and welcoming new contributors regularly.
+- [ECCO](https://www.geosci-model-dev.net/8/3071/2015/) is a global ocean state estimation framework that uses `MITgcm` as a dependency. `git` & `GitHub.com` are now used to provide and document the [model configuration](https://eccov4.readthedocs.io/en/latest/?badge=latest). This allows anyone with access to e.g. a small cluster to easily rerun solutions, which were generated as far as 4 years ago, and verify that they reproduced the original results accurately. The model input, as needed to rerun the `ECCOv4r2` solution of `MITgcm`, is permanently archived in the [Harvad Dataverse](https://dataverse.harvard.edu/dataverse/ECCOv4r2) along with the reference model output from 2016.
+- [Forget & Ferreira 2019](https://doi.org/10.1038/s41561-019-0333-7) is a study published last year that in turn uses `ECCOv4r2` output as a dependency. The study results are in turn archived in [this dataverse](https://doi.org/10.7910/DVN/AVVGYX). And the [Helmholtz Decomposition](https://en.wikipedia.org/wiki/Helmholtz_decomposition) method needed to recreate the new results is now available both in [this Matlab / Octave package](https://gcmfaces.readthedocs.io/en/latest/) and in [this Julia package](https://gaelforget.github.io/MeshArrays.jl/stable/). You can run it e.g. using [binder](https://mybinder.org/) and a notebook [in this repo](https://github.com/gaelforget/MeshArrayNotebooks). 
+- [Hausfather, Drake, Abbott, & Schmidt 2019](https://doi.org/10.1029/2019GL085378) is another example that relies on a different set of dependencies. Here the authors evaluate the performance of past climate model projections. [This repository](https://github.com/hausfath/OldModels) contains the notebooks, scripts, and data that correspond to the analysis in the paper. `Python` dependencies are listed in the `environment.yml` in this case. Hence you can use `binder` to rerun the analysis in the cloud.
+
+As usual, you are welcome to get involved. For example, please consider:
+
+- using the **watch**, **star**, or **fork** functionalities on `github.com`.
+- contributing via the repo `issue trackers` (for questions, bug reports, etc).
+- helping maintain, improve, or extend these projects via `forks` and `pull requests`.
+
+## 4. Exercises & Additional Ressources
 
 All of the exercises can be done using the cloud-based environment included in the workshop material. Just hit the `binder` badge in the [workshop landing page](https://github.com/PraCTES/MIT-PraCTES) to get it started.
 
