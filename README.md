@@ -13,4 +13,4 @@ The PraCTES workshop is a series of demos and hands-on tutorials for practical c
 
 Each two-hour session will be highly interactive: instructors will swap between presenting background information on topics (e.g. What is an Earth System Model? How does github work behind the scenes?), demonstrating computing concepts with live demos and leading hands-on code tutorials and exercises, which attendees can follow along with in real-time on their personal laptops. Attendees should feel free to opt-in and opt-out at whichever point in the curriculum they feel is appropriate. Whenever possible, our demos and hands-on tutorials will be agnostic of programming language and earth science subfield, recognizing the many ways in which people engage with computation in earth science. To get the most out of the workshop, **bring a laptop** and follow along!
 
-<img src="PraCTES_flyer.jpg" width="100%">
+<img src="PraCTES_flyer.png" width="100%">
