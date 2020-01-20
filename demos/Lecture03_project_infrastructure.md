@@ -43,7 +43,6 @@ _Pull requests, issues, star, watch, etc. on [Github.com]() are also documentati
 	- in **Exercise 3** you set up a practical collaborative framework for [the workshop repo](https://github.com/PraCTES/MIT-PraCTES)
 	- [the github GUI](https://github.com/PraCTES/MIT-PraCTES) (e.g. file history, blame, commits, forks, PRs; see repo examples)
 	- [semantic versioning](https://en.wikipedia.org/wiki/Software_versioning), GitHub releases, [Digital Object Idenfifier (DOI)](https://en.wikipedia.org/wiki/Digital_object_identifier), e.g. [zenodo.org](https://zenodo.org)
-	- within this repo, e.g., `Julia` dependencies & versions are specified in `binder/*.toml` 
 	- In **Exercise 4** you create a `Julia` package and set up version control for it.
 
 _In **Exercises 1, 2** you already started doing version control using command line git. **Exercise 3** focuses on collaboration development, but version control can be useful for all sorts of shared or private repositories. After a while it may become a reflex to do it for all codes that you won't immediately throw away. This approach is very commonly used for packages (see below) and `git` is suitably designed for small text files (e.g., plain julia code). However, other services apply a similar approach to data sets (e.g., dataverse), papers (e.g., overleaf), and jupyter notebooks can be converted to plain code (e.g., jupytext)._
@@ -94,9 +93,9 @@ This method is freely provided by [mybinder.org]() and it uses the [jupyterlab](
 - 1. Command Line Git
 - 2. Command Line & Unit Tests
 - 3. Practical Collaboration Setup
-- 4. Create a package and collaborate
-- 5. Start a Julia project and start coding
-- 6. tracking changes with jupytext
+- 4. Create A Package And Collaborate
+- 5. A Version-Controled Julia Project 
+- 6. Track Changes Using Jupytext
 
 ### Exercise #0 -- Hello GitHub World
 
@@ -104,41 +103,36 @@ Follow the directions in the [Hello World](https://guides.github.com/activities/
 
 ### Exercise #1 -- Command Line Git
 
-In the Jupyter lab side bar, or the launcher pane, click to launch a terminal window where you will be able to type:
-
+In the `Jupyterlab` launcher pane click on `terminal`. A window should open where you will be able to type `shell` command lines. For example you can dowload / clone the workshop repository from `GitHub.com` like this:
 
 ```
 cd ~
 git clone https://github.com/PraCTES/MIT-PraCTES
-cd MIT-PraCTES
-ls -la
+ls -la MIT-PraCTES/
 ```
 
-In the Jupyter lab side bar (not the open terminal pane), double click on `demos/README.md` to open it the build in text editor. Add a blank line, save, and close the file. Then go back to the open terminal pane, and create a new folder that we will then turn into a git repository. 
+The final command (`ls ...`) lists everything inside the local copy of `MIT-PraCTES/`. It should reveal a subfolder called `.git/` because version control has been set up for this repo. The `.git/` folder is where `git` operates its magic. The `binder/` folder is where we put information about the cloud environment that you are using. The `demos/` folder should contain the present file. etc.
+
+Next, let's create a new folder (`mkdir test20200117`) and start tracking its contents (`git init`). Try `ls -la` before and after to see the hidden `.git/` folder appear. The next line create sa short text file called `readme`, `git add` then tells `git` about it, and `git commit` records the content of the file -- at this point `readme` is in the version control system. 
 
 ```
 cd ~
 mkdir test20200117
 cd test20200117
-```
-
-`git init` is next -- it will set up `git` to track files inside the `test20200117/` folder. Try `ls -la` before and after to see the hidden `.git/` folder appear. The sequence of commands reprted below further creates an empty file (`touch readme`), makes git track this file (`git add`), and then saves the file (`git commit`). 
-
-The final command will ask for a username and email once -- this is the key information that git uses for its book-keeping and attribute authorship to contributions inside the `.git/` folder.
-
-```
 git init
-git status
-touch readme
-git status
+
+echo "Hi ther" > readme
 git add readme
-git status
 git commit -m "initial commit"
 ```
 
-The `git status` commands were inserted several time for demonstrative purposes. `git log` ... 
+Try `git status` before and after each of the commands -- the printed message should go from _Untracked_ to _new file_ to _nothing to commit_. The final command should ask for a username and email at least once -- this is the key information that `git` uses for its book-keeping and to attribute authorship inside the `.git/` folder. 
 
-Next is `git remote` then `git push` ... 
+Next, let's modify `readme` and commit the changes. Open `readme` using the `jupyterlab` menu bar (`File > Open from Path... > test20200117/readme`), e.g. add an _e_ after _ther_, and save the modified file. Now go back to the terminal window and type `git commit readme`. You will be prompted to provide a `commit message` by the pre-installed [nano editor](https://www.nano-editor.org). Enter some text then hit `^X` to exit, `y` to confirm, and `return` to finish.
+
+Now you can reveal what has been recorded by the version control system using the `git log` command. A list of recent commits should appear -- there should be two at this point. Next to each `commit` in the list there is a long sort of code (an _hexadecimal_). If you copy it and paste after `git show ` then you should get more information about that commit.
+
+To finish you can upload the repository you just created at the command line by following [these instructions](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line). This invoves the `GitHub.com` GUI, and then `git remote` & `git push` at the command line. Note that you have already done the `git init` and `git commit` parts here.
 
 ### Exercise #2 -- Command Line & Unit Tests
 
@@ -235,9 +229,7 @@ Finally:
 
 The approach described in the [MITgcm manual's](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html) is a typical, practical collaborative  model. The basic configuration is depicted below and your exercise is to set this up for the repo from the class. 
 
-To this end, you will first fork (github), clone (terminal), and branch (terminal) [as explained here](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html). 
-
-Then, in the terminal window, execute the following command:
+To this end, you will first fork (github), clone (terminal), and branch (terminal) [as explained here](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html). Then, in the terminal window, execute the following command:
 
 `git remote add upstream https://github.com/PraCTES/MIT-PraCTES`
 
@@ -252,30 +244,94 @@ The `pull upstream` command effectively brings the latest updates from the main 
 
 <img src="https://mitgcm.readthedocs.io/en/latest/_images/git_setup.svg" width="50%">
 
-### Exercise #4a -- Create a package
+### Exercise #4a -- Create a Julia package
 
 Create a julia package, add tests, add docs, and push to your github account following [this guide](https://julialang.github.io/Pkg.jl/v1/creating-packages/)
 
-```cat binder/Project.toml```
+### Exercise #4b -- Collaborate on packages
 
-### Exercise #4b -- Collaborate on a package
+Let's re-use your repos from **Exercise 4a** and use them to try out collaborative development mechanisms.
 
-- 1. Pair up and setup the structure depicted in **example 3** using one-another's repo from **example 4a** as the `main repo`. 
-- 2. Use `git branch`, `git commit`, `git push`, `PRs`, `git merge`, etc back and forth between your two github accounts using your own laptops for command-line git.
+- 1. Pair up with another workshop attendee
+- 2. Proceed as in **Exercise 3** using their repo as `main repo` (and vice versa for them).
+- 3. In your clone of their repo, create a branch, add a new file, and `git commit`.
+- 4. Use `git push` and `Pull Request` to submit your proposed changes to them. The `PR` should point from the modified branch in your fork to the master branch in the main repo on `GitHub.com`.
+- 5. They can now `merge` your pull request into their `master` branch.
+- 6. To finish you want to update the `master` branch in your fork as [explained here](https://mitgcm.readthedocs.io/en/latest/contributing/contributing.html).
 
-### Exercise #5a -- Start a Julia project
+_Note: you can also do the command-line git part using your own laptops._
 
-Mix and Match packages to create something new. E.g. `Juls.jl`, `MeshArrays.jl`, `IndividualDisplacements.jl`, compute transports (e.g. [Forget & Ferreira 2019](https://doi.org/10.1038/s41561-019-0333-7)).
+### Exercise 5 -- A Version-Controled Julia Project  
 
-### Exercise #5b -- Define A Julia Function
+Here is a Julia code sample where we define a new `xy` type and then redefine `sum` for this new type. This corresponds to what was done in lecture 2 in Python where we defined objects and methods. **In this exercise** we will turn this code snippet into a version-vontroled project hosted on `github.com` and easily reproduced on `mybinder.org`.
 
-Overload `Julia`'s `heatmap` function from the `Plots.jl` package to set color scale to pre-specified ranges when this information is build into a custom array type. We did something similar in `session #2` using `Python`. 
+```
+#Define a new data type with two real numbers
+struct xy
+	a::Float64
+	b::Float64
+end
 
-Here we want to highlight some of the key aspects in which `Julia` differs from `Python`: type system, _functions are objects_, type annotations, multiple dispatch, broadcasting, unicode, ...
+#Define a variable of the new data type
+ab=xy(1.0,2.0)
+typeof(ab)
+show(ab)
 
-Let's first define a custom array data type that contains a range...
+#The following command would return an error message at this point 
+#because julia does not now yet how to compute the sum of ab
+#sum(ab)
 
-### Exercise #6 -- tracking changes using jupytext
+#We want to define a special version of the sum function 
+#that applies when the input type is `xy` (`::xy` in Julia) 
+import Base:sum
+function sum(ab::xy)
+	ab.a+ab.b
+end
+
+#Now this works:
+sum(ab)
+```       
+
+_In Julia terminology, the function `sum` in the provided example disptaches to the method where the type of the sole input is annotated as `xy`. Notice how this resembles but also differs from what we did in lecture 2 in Python. Some of the key aspects in which `Julia` differs from `Python` include: functions v objects, multiple dispatch, type annotations, broadcasting. But there are also lots of similarities._
+
+##### Exercise 5.0
+- open a julia notebook
+- copy the above code in the notebook
+- Verify at the end that `sum(xy(1.0,2.0))==3.0` is true
+- save to file (e.g. `xysum.ipynb` could be its name)
+
+##### Exercise 5.1
+- open a terminal window 
+- create a new folder, move `xysum.ipynb` to this folder
+- copy the `binder/*.toml` files to the new folder
+- setup version control (`git`) for this folder
+- git add and commit the folder's three files
+
+##### Exercise 5.2
+- create a new repo on `GitHub.com`
+- `git push` your project to this `github.com` repo
+- rerun the project using `mybinder.org` & the `github.com` repo
+- take a minute to celebrate? 
+
+##### Exercise 5.3
+
+Let's add another type and method to your project. Now we want to plot a curve and set the vertical axis range automatically -- based on the `min` and `max` embeded in each `RangeArray` instance.
+
+- In a new notebook, first add the `Plots.jl` package and the `RangeArray` type (see below).
+- Create a special version of the `plot` function for the `RangeArray` type.
+- Add a docstring juat before the new `plot` method is defined.
+- Provide a visual example of the new `plot` method working at the end.
+- Then proceed as in `5.1` & `5.2`
+
+```
+struct RangeArray
+	arr::Array
+   	min::Float64
+   	max::Float64
+end
+```
+
+### Exercise #6 -- Track Changes Using Jupytext
 
 Install and try [jupytext](https://jupytext.readthedocs.io/en/latest/install.html) in the Jupyter lab environments or on your laptop. Using the paired _light scripts_ appraoch where `.jl` files are kept in sync with your notebooks (as in [this example](https://github.com/gaelforget/MeshArrayNotebooks)) can make it easier to trace back changes made to jupyter notebooks using `git` and `github`.
 
