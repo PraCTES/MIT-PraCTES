@@ -18,10 +18,12 @@
   **Instructor**: Gael Forget\
   WebEx link for virtual attendees: [[click here]](https://mit.webex.com/mit/j.php?MTID=m6fa8c16e83bad88a851f0737a588e5de) (Meeting Password: Hhink476)
 
+Note: Lectures 4 and 7 have swapped times relative to the original workshop schedule!
+
 - ### Wednesday, January 22nd, 10 AM - 12 PM
-  **Lecture 4: High-performance computing (HPC), compilers, and parallelism**\
+  **Lecture 4: Big data: challenges and solutions**\
   **Room 1623, Building 54**\
-  **Instructor**: Tristan Abbott\
+  **Instructor**: Henri Drake\
   WebEx link for virtual attendees: [[click here]](https://mit.webex.com/mit/j.php?MTID=m208d1333cbdc83afd9855b1650e3f3c6) (Meeting Password: wyPYg692)
 
 - ### Friday, January 24th, 10 AM - 12 PM
@@ -43,7 +45,7 @@ Note: *atypical* day of week and rooms for last week of workshop
   WebEx link for virtual attendees: [[click here]](https://mit.webex.com/mit/j.php?MTID=m01ab61a2b92f4ae5a94429f812bb1936) (Meeting Password: zKPpj385)
 
 - ### Friday, January 31st, 10 AM - 12 PM
-  **Lecture 7: Big data: challenges and solutions**\
+  **Lecture 7: High-performance computing (HPC), compilers, and parallelism**\
   ***Room 915*, Building 54**\
-  **Instructor**: Henri Drake\
+  **Instructor**: Tristan Abbott\
   WebEx link for virtual attendees: [[click here]](https://mit.webex.com/mit/j.php?MTID=mcec6f62ac3eb833d76c5fddf1937f892) (Meeting Password: tBF7P9J3)
