@@ -1,1 +1,1 @@
-### Code demos and exercises (with solutions)
+The tutorials were created with the intention that they could be used either in live demos (i.e. with an instructor) or by readers following along on their own. In either case, we recommend going through the demos sequentially, starting with the materials in `Lecture01_Intro_Programming`.
