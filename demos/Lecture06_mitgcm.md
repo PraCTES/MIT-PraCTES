@@ -18,11 +18,8 @@ There is a difference between unit test case and curated setup. [ECCOv4](https:/
 - Exercise: proper global mean in julia; redo with xgcm etc
 - Exercise: set `useSingleCpuIO` to false in namelist and rerun model 
 
-<img src="https://github.com/JuliaClimate/MeshArrays.jl/blob/master/docs/images/sphere_all.png]" width="50%">
 
-![](https://github.com/JuliaClimate/MeshArrays.jl/blob/master/docs/images/sphere_all.png?resize=1024,611)
-
-![](https://github.blog/wp-content/uploads/2019/01/Community-Updated-2X.png?resize=1024,611)         |  ![](https://image.slidesharecdn.com/ci-131213183852-phpapp01/95/github-travis-ci-coveralls-maven-ci2-19-638.jpg)
+![](https://mitgcm.readthedocs.io/en/latest/_images/u_cube_latlon_comb.svg?resize=1024,611)         |  ![](https://github.com/JuliaClimate/MeshArrays.jl/blob/master/docs/images/sphere_all.png?resize=1024,611)
 :------------------------------:|:---------------------------------:
 ![](https://camo.githubusercontent.com/6d7260eaa159cfb838b45bf168ff77adecf8b198/68747470733a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67)  |  ![](https://insights.tuhh.de/wp-content/uploads/2019/02/jupyter-workflow-973x1024.png)
 
