@@ -20,6 +20,8 @@ There is a difference between unit test case and curated setup. [ECCOv4](https:/
 - Exercise: proper global mean in julia; redo with xgcm etc
 - Exercise: set `useSingleCpuIO` to false in namelist and rerun model 
 
+### Exercise Material
+
 ```
 cd MITgcm/mysetups/ECCOv4
 ln -s /data/* .
