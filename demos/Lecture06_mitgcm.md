@@ -5,9 +5,9 @@
 
 `MITgcm` is a general circulation model that can simulate the Ocean, Amosphere, sea-ice, ocean biogeochemistry, and marine ecosystems.
 
-![](https://github.com/gaelforget/GlobalOceanNotebooks/blob/master/OceanTransports/MOC.png?resize=1024,1024)         |  ![](https://mitgcm.readthedocs.io/en/latest/_images/eddy_on_cubic_globe.svg?resize=512,512)
+![](https://github.com/gaelforget/GlobalOceanNotebooks/blob/master/OceanTransports/MOC.png)         |  ![](https://mitgcm.readthedocs.io/en/latest/_images/scales.png)
 :------------------------------:|:---------------------------------:
-![](https://mitgcm.readthedocs.io/en/latest/_images/scales.png)  |  ![](https://mitgcm.readthedocs.io/en/latest/_images/adv_gyre_maps.png)
+![](https://mitgcm.readthedocs.io/en/latest/_images/eddy_on_cubic_globe.svg)  |  ![](https://mitgcm.readthedocs.io/en/latest/_images/adv_gyre_maps.png)
 
 It is coded in Fortran and therefore is manually compiled before using the model. `MITgcm` has extensive documentation that, while imperfect, is widely regarded as quite useful.  
 
