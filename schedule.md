@@ -1,4 +1,4 @@
-# Workshop schedule
+# January 2020 Workshop schedule
 
 - ### Friday, January 10th, 10 AM - 12 PM
   **Lecture 1: Introduction to programming**\

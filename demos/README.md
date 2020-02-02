@@ -1,1 +1,3 @@
-The tutorials were created with the intention that they could be used either in live demos (i.e. with an instructor) or by readers following along on their own. In either case, we recommend going through the demos sequentially, starting with the materials in `Lecture01_Intro_Programming`.
+#### About PraCTES demos
+
+The tutorials were created with the intention that they could be used either in live demos (i.e. with an instructor) or by readers following along on their own. In either case, we recommend going through the demos sequentially, starting with the materials in [`Lecture01_Intro_Programming`](https://github.com/PraCTES/MIT-PraCTES/tree/master/demos/Lecture01_Intro_Programming).

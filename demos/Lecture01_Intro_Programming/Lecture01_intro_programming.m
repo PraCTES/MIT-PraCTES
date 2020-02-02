@@ -286,6 +286,17 @@ C_el = A .* B % elementwise product
 
 C_mat = A*B % matrix product
 
+%% Indexing
+% Indexing in matlab arrays is a multi-dimensional extension of indexing matlab lists, where each dimension's indices are separated by a comma:
+
+A
+A(2,1)
+
+% Conditional indexing is a powerful tool for manipulating array data:
+
+indices = A==1
+A(indices)
+A(indices) = 2
 
 %% Built-in functions
 

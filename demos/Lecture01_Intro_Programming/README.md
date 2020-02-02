@@ -4,12 +4,15 @@ The *Introduction to Programming* tutorial is available in the three high-level,
 
 The Python and Julia notebooks can be run in two ways: via a ["binder"](https://mybinder.org/v2/gh/PraCTES/MIT-PraCTES/master?urlpath=lab) (an online, interactive environment that can be run directly in your browser) or by installing the language's core software on your personal machine, as well as any additional software packages (see how to do this using packages managers below).
 
+<hr>
 
 ## Step-by-step instructions to setting up your programming environment
 
-### Python
+#### Python
 
-1. Follow the [instructions to install Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), a Python package manager which handles the complex inter-dependences between various Python packages behind the scenes.
+0. Clone the [github.com/PraCTES/MIT-PraCTES](github.com/PraCTES/MIT-PraCTES) repository (see the [Lecture03 demo](https://github.com/PraCTES/MIT-PraCTES/blob/master/demos/Lecture03_Project_Infrastructure/Lecture03_project_infrastructure.md) for a brief introduction to git and github).
+
+1. Follow the [instructions to install Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), a Python package manager which handles the complex inter-dependencies between various Python packages behind the scenes.
 
 2. Follow the [instructions to launch Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#starting-conda) (conda for short).
 
@@ -37,7 +40,8 @@ dependencies:
 
 6. Use the filesystem browser in the top left to navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the Python tutorial notebook `Lecture01_intro_programming.ipynb`.
 
-### Julia
+#### Julia
+0. Clone the [github.com/PraCTES/MIT-PraCTES](github.com/PraCTES/MIT-PraCTES) repository (see the [Lecture03 demo](https://github.com/PraCTES/MIT-PraCTES/blob/master/demos/Lecture03_Project_Infrastructure/Lecture03_project_infrastructure.md) for a brief introduction to git and github).
 
 1. [Download](https://julialang.org/downloads/) and install Julia (> v.1.0.0)
 
@@ -68,7 +72,8 @@ To activate [jupyterlab](https://jupyterlab.readthedocs.io/en/stable/) and launc
 
 8. Use the filesystem browser in the top left to navigate to `/MIT-PraCTES/demos/Lecture01_Intro_Programming/` and open the julia tutorial notebook `Lecture01_intro_programming_jl.ipynb`.
 
-### Matlab
+#### Matlab
+0. Clone the [github.com/PraCTES/MIT-PraCTES](github.com/PraCTES/MIT-PraCTES) repository (see the [Lecture03 demo](https://github.com/PraCTES/MIT-PraCTES/blob/master/demos/Lecture03_Project_Infrastructure/Lecture03_project_infrastructure.md) for a brief introduction to git and github).
 
 1. [Download](https://www.mathworks.com/downloads/) and install Matlab (you may be able to get a free license through your academic institution or company - if not, a personal license can be very pricey and we recommend the free and open-source alternatives above).
 
