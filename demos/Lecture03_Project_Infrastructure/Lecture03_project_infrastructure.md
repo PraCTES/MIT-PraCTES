@@ -25,7 +25,7 @@ This session is about tools and methods (_section 1._) that make it easy to orga
 
 
 - Introducing Github, which is basically: git (version control) + social networking + apps / cloud services
-	- Get started with [GitHub](https://github.com/) & [command-line git](https://education.github.com/git-cheat-sheet-education.pdf) in **Exercise 0**
+	- Get started with [GitHub](https://guides.github.com/) & [command-line git](https://education.github.com/git-cheat-sheet-education.pdf) in **Exercise 0**
 	- Get more familiar with command-line tools (**Exercises 1, 2**)
 	- Examples of how organizations use Github: [MITgcm](https://github.com/mitgcm) (mature Fortran example), [JuliaDynamics](https://github.com/juliadynamics) (fairly mature Julia example), [JuliaClimate](https://github.com/JuliaClimate) (early stages of development Julia example)
 	- Repository (_repo_) examples: [MITgcm repo](https://github.com/mitgcm/mitgcm), [JuliaDynamics repo](https://github.com/juliadynamics/agents.jl), [JuliaClimate repo](https://github.com/meta)
